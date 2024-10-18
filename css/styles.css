@@ -1,4 +1,3 @@
-/* Body and form are centered on the page */
 body {
     margin: 0;
     padding: 0;
@@ -11,7 +10,6 @@ body {
 }
 
 
-/* Style the form */
 form {
     background-color: white;
     padding: 20px;
