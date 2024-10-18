@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <h2>Login</h2>
+    <form id="loginForm" action="javascript:void(0);">
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" required>
+        
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" required>
+        
+        <button type="submit">Login</button>
+    </form>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function() {
+            const loginUsername = document.getElementById("loginUsername").value;
+            const loginPassword = document.getElementById("loginPassword").value;
+
+            const storedUsername = localStorage.getItem("username");
+            const storedPassword = localStorage.getItem("password");
+
+            if (loginUsername === storedUsername && loginPassword === storedPassword) {
+                alert("Login successful!");
+                window.location.href = "file:///C:/Users/User/Desktop/SysArch/dashboard.html"; // Redirect to dashboard
+            } else {
+                alert("Invalid username or password.");
+            }
+        });
+    </script>
+
+</body>
+</html>

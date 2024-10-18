@@ -1,0 +1,142 @@
+/* Body and form are centered on the page */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url("wallpaper.jpg")
+}
+
+
+/* Style the form */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center;    /* Center the form elements horizontally */
+}
+
+h2 {
+    position: absolute;
+    top: 30%;              /* Vertical center (middle of the page) */
+    left: 50%;             /* Horizontal center */
+    transform: translate(-50%, -50%);  /* Ensures perfect centering */
+    font-size: 35px;       /* Adjust font size as needed */
+    text-align: center;
+    margin: 0;             /* Removes any default margin */
+    font-family: Arial, sans-serif;  /* You can adjust the font family */
+}
+
+h4 {
+    position: absolute;
+    top: 15%;              /* Vertical center (middle of the page) */
+    left: 50%;             /* Horizontal center */
+    transform: translate(-50%, -50%);  /* Ensures perfect centering */
+    font-size: 35px;       /* Adjust font size as needed */
+    text-align: center;
+    margin: 0;             /* Removes any default margin */
+    font-family: Arial, sans-serif;  /* You can adjust the font family */
+    color: #013220;
+    }
+
+
+form label, form input {
+    width: 100%;             /* Full width for labels and inputs */
+    margin-bottom: 10px;      /* Spacing between labels and inputs */
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;  /* Include padding and border in the element's width and height */
+}
+
+button {
+    width: 100%;             /* Full width for the submit button */
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Body and form are centered on the page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("wallpaper.jpg");
+    background-size: cover;
+}
+
+/* Top Navigation Bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays on top */
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+/* Sidebar Navigation */
+#sidebar-wrapper {
+    height: 100vh;
+    background-color: #f8f9fa;
+    padding-top: 60px; /* Adjust to match navbar height */
+}
+
+/* Main Dashboard Content */
+.container-fluid {
+    padding-left: 0;
+}
+
+/* Page Content Adjustments */
+h1.h2 {
+    font-size: 2rem;
+}
+
+/* Sidebar Toggle Button (Optional for Mobile Views) */
+@media (max-width: 768px) {
+    #sidebar-wrapper {
+        display: none;
+    }
+}
+

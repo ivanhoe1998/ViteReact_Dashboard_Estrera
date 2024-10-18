@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <h2>Registration</h2>
+    <form id="registrationForm" action="javascript:void(0);">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" required>
+        
+        <button type="submit">Register</button>
+    </form>
+    
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            // Save the user information to localStorage
+            localStorage.setItem("username", username);
+            localStorage.setItem("password", password);
+
+            alert("Registration successful! You can now log in.");
+            window.location.href = "file:///C:/Users/User/Desktop/SysArch/login.html"; // Redirect to login page
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* Body and form are centered on the page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("wallpaper.jpg");
+    background-size: cover;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays on top */
+}
+
+.top-nav li {
+    float: left;
+}
+
+.top-nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.top-nav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 180px; /* Smaller width */
+    background-color: #f8f9fa;
+    padding-top: 20px;
+    position: fixed; /* Fixes the sidebar in place */
+    top: 60px; /* Below the top nav */
+    left: 0;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    transition: transform 0.3s ease; /* Smooth slide */
+}
+
+.sidebar.collapsed {
+    transform: translateX(-200px); /* Slide out when collapsed */
+}
+
+.sidebar .nav-link {
+    color: #333;
+    padding: 10px 20px;
+}
+
+.sidebar .nav-link.active {
+    background-color: #e9ecef;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Main Dashboard Content */
+.content {
+    margin-left: 200px; /* Aligns content next to sidebar */
+    padding: 20px;
+    transition: margin-left 0.3s ease; /* Smooth slide */
+}
+
+.sidebar.collapsed + .content {
+    margin-left: 0; /* Adjust content margin when sidebar is collapsed */
+}
+
+/* Sidebar Toggle Button (Optional for Mobile Views) */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-200px); /* Hide sidebar by default on mobile */
+    }
+    
+    .sidebar.collapsed {
+        transform: translateX(0); /* Show when toggled */
+    }
+
+    .content {
+        margin-left: 0; /* Full width content on mobile */
+    }
+}
