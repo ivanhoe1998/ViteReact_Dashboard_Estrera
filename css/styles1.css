@@ -1,4 +1,3 @@
-/* Body and form are centered on the page */
 body {
     margin: 0;
     padding: 0;
@@ -7,7 +6,7 @@ body {
     background-size: cover;
 }
 
-/* Top Navigation Bar */
+
 .top-nav {
     list-style-type: none;
     margin: 0;
@@ -17,7 +16,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Ensures it stays on top */
+    z-index: 1000; 
 }
 
 .top-nav li {
@@ -40,21 +39,21 @@ body {
     background-color: #04AA6D;
 }
 
-/* Sidebar Navigation */
+
 .sidebar {
-    width: 180px; /* Smaller width */
+    width: 180px; 
     background-color: #f8f9fa;
     padding-top: 20px;
-    position: fixed; /* Fixes the sidebar in place */
-    top: 60px; /* Below the top nav */
+    position: fixed; 
+    top: 60px; 
     left: 0;
     height: calc(100vh - 60px);
     overflow-y: auto;
-    transition: transform 0.3s ease; /* Smooth slide */
+    transition: transform 0.3s ease; 
 }
 
 .sidebar.collapsed {
-    transform: translateX(-200px); /* Slide out when collapsed */
+    transform: translateX(-200px); 
 }
 
 .sidebar .nav-link {
@@ -68,28 +67,28 @@ body {
     font-weight: bold;
 }
 
-/* Main Dashboard Content */
+
 .content {
-    margin-left: 200px; /* Aligns content next to sidebar */
+    margin-left: 200px; 
     padding: 20px;
-    transition: margin-left 0.3s ease; /* Smooth slide */
+    transition: margin-left 0.3s ease; 
 }
 
 .sidebar.collapsed + .content {
-    margin-left: 0; /* Adjust content margin when sidebar is collapsed */
+    margin-left: 0; 
 }
 
-/* Sidebar Toggle Button (Optional for Mobile Views) */
+
 @media (max-width: 768px) {
     .sidebar {
-        transform: translateX(-200px); /* Hide sidebar by default on mobile */
+        transform: translateX(-200px); 
     }
     
     .sidebar.collapsed {
-        transform: translateX(0); /* Show when toggled */
+        transform: translateX(0); 
     }
 
     .content {
-        margin-left: 0; /* Full width content on mobile */
+        margin-left: 0; 
     }
 }
